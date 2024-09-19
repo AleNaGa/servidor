@@ -1,0 +1,98 @@
+﻿DIA 1 GIT
+	-> MAVEN gestor de dependencias: descarga librerias para usar
+		Construye proyectos y utiliza arquetipos y compiladores propios
+		MAVEN: com.Compañia.nombreProyecto
+	
+	
+	GIT comandos: https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init
+	Crear repositorio:
+		Add readme
+		add .gitignore
+		License: GNU
+	Clonar el repositorio con URL
+		cd c:\dev 
+		mkdir git
+		cd git
+		git clone "URLRepo"
+	Crear rama develop a partir de rama main
+		git checkout -b develop
+	Comit y pushear a Develop
+		git add . no usar
+		añadir uno a uno
+		git commit -m "mensaje de commit"
+		git push --set-upstream origin develop //publica la rama
+			abrir la pull request
+			main <- develop
+		git add contenido
+		git commit -m "nuevo contenido"
+		git push
+			Pull request
+			main <- develop 
+
+
+
+TRABAJAR CON GIT paso a paso
+
+-Crear carpeta en ventana
+-Abrir gitBash en la dirección: cd: RUTA
+-Inicializar el git: git init
+-Subir a remoto: 
+	git remote add origin "URL del repo en GITHUB"
+	git push origin master
+	si falla: git pull --rebase origin master
+	set upstream origin master //subir primera vez
+	
+-EN MAIN no se toca nada
+	-Crear rama develop: 
+		git checkout -b "develop"
+		git push origin develop //sube la rama al repo
+			-crear rama de trabajo "Features"
+				git checkout -b "features"
+				TRABAJO
+				subo: 
+				git add . //añadir al local
+				git commit -m "TRABAJO" //commitear
+				git push //subir a github
+			
+			En Github Compare feature con Develop
+				base: develop <- features
+				mergear en github
+				
+		git pull origin develop //traer develop de repo a local
+		
+				CREAR UN RELEASE BRANCH
+				git checkout -b "release/1.0.0"
+				git pull 
+				Merge en GITHUB
+			
+			Crear Nueva Rama "FEATURES skins"
+				-git checkout -b "skins"
+				TRABAJO
+				Subo: 
+				git add .
+				git commit -m "mensaje"
+				git push
+				git push origin skins
+				MERGEAMOS a Develop
+			Crear rama release desde develop
+				git checkout -b release 1.1.0
+				git push 
+				Mergeamos a MAIN
+			RAMA HOTFIX
+				creamos la rama
+				arreglamos
+				mergeamos a master y develop
+				
+			
+			
+		
+	
+		
+				
+	
+
+
+		
+		
+	
+	
