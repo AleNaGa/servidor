@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="multiplicacion.php" method="GET">
+<form action="clase2.php" method="GET">
         <input type="text" id= "edad" name="edad" placeholder="tu edad" >
 </form>
 <?php if(isset($_GET["edad"])):?>
