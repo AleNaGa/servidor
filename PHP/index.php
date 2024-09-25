@@ -102,7 +102,5 @@
     <?php endforeach; ?>
 
     <?php include("php/metodos.php") ?>
-
-
 </body>
 </html>
