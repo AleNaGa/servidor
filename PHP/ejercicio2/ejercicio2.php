@@ -184,6 +184,62 @@ foreach($arrayPrim1 as $n){
    }
 }
 ?>
+<br/>
+<?php
+//6 solo primos
+foreach($arrayPrim1 as $n){
+   if(!esPrimo($n)){
+      unset($arrayPrim1[$n]);
+   }
+}
+echo "el resto son: "; imprimirArray($arrayPrim1);
+?>
 <!-- FALTAN PALINDRMOS-->
+<br/>
+<p>Palindromos</p>
+<br/>
+<?php
+//9
+$palind = ["ana","mesa","radar","seres","folio","sudoku","amor a roma","sol","mar","oso","salas"];
+foreach($palind as $n){
+if(esPalindromo($n)){
+   echo"Hay palíndromo: ".$n;
+   break;
+}
+}
+//10
+foreach($palind as $n){
+   if(!esPalindromo($n)){
+      echo "No todos son Palíndromos!";
+      break;
+   }
+}
+//11
+foreach($palind as $n){
+   if(esPalindromo($n)){
+      echo"El primer palíndromo está en la posición : " .  $palind[$n];
+      echo " Y es: ".$n;
+      break;
+   }
+}
+//13
+foreach($palind as $n){
+   if(!esPalindromo($n)){
+      unset($palind[$n]);
+   }
+}
+echo " el resto que son palíndromos: ". imprimirArray($palind);
+
+
+//Filtrar arrays de longitud 5
+$palind =array_filter($palind,function($n){return strlen($n)==5;});
+echo array_filter($palind,function($n){return strlen($n)==3;});
+
+
+
+
+
+
+?>
 </body>
 </html>
