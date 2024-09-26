@@ -65,5 +65,42 @@
         }
         ?>
     </p>
+
+    <!-- funciones php -->
+    <?php function getVar($var){
+        if(isset($var)){
+            return $var;
+        }else{
+            return "no existe"; 
+        }
+    }
+
+    //arrays
+    $PROFES = ["MARIAFER", "Juan", "Pedro"];
+    foreach($PROFES as $prof){
+        echo $prof;
+    }
+    for($i=0; $i<count($PROFES); $i++){
+        echo $PROFES[$i];
+    }
+    ?>
+    <!-- forma bonita-->
+    <?php foreach($PROFES as $prof): ?>
+        <h4><?= $prof; ?></h4>
+    <?php endforeach; ?>
+
+    <!-- arrays asociativos -->
+    <?php $PROFES = ["MARIAFER" => 1, "Juan" => 2, "Pedro" => 3]; ?>
+    <?php foreach($PROFES as $prof => $num): ?>
+        <h4><?= $prof; ?> <?= $num; ?></h4>
+    <?php endforeach; ?>
+
+    <!-- arrays multidimensionales -->
+    <?php $PROFES = ["MARIAFER" => ["num1" => 1, "num2" => 2], "Juan" => ["num1" => 3, "num2" => 4], "Pedro" => ["num1" => 5, "num2" => 6]]; ?>
+    <?php foreach($PROFES as $prof => $num): ?>
+        <h4><?= $prof; ?> <?= $num["num1"]; ?> <?= $num["num2"]; ?></h4>
+    <?php endforeach; ?>
+
+    <?php include("php/metodos.php") ?>
 </body>
 </html>
