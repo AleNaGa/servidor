@@ -39,4 +39,39 @@ function reverseArray($array){
         echo "no es un array";
     }
 }
+
+function esPalindromo($word){
+    $reversed = strrev($word);
+    if($word == $reversed){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function numNeg($num){
+    if($num<0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function encuentraLetra($wrd,$lettr){
+    for($i=0;$i<strlen($wrd);$i++){
+        if($wrd[$i]==$lettr){
+            return $i;
+        }
+    }
+    return -1;
+}
+
+function masDe2Cifras($num){
+    if($num>9){
+        return true;
+    }else{
+        return false;
+    }
+
+}
 ?>
