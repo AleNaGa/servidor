@@ -65,6 +65,10 @@ Class serVivo{
         return $this->getNombre() . " " . $this->getNombreCientif() . " " . $this->getFamilia() . " " . $this->getMedio();
     }
     
+    public function reproduce(){
+       $hijo = new SerVivo($this->nombre,$this->nombreCientif,$this->familia,$this->medio);
+       return $hijo;
+    }
 
 
 
